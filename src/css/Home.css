@@ -1,0 +1,58 @@
+/* Home container */
+.home-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Books list grid container */
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+/* Alternative flexbox approach (uncomment if you prefer this) */
+/*
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px 0;
+}
+*/
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .books-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px;
+  }
+  
+  .books-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 10px;
+  }
+  
+  .books-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 10px 0;
+  }
+}
